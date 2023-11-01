@@ -1,0 +1,184 @@
+.wallpaper {
+  /*Positioning stuff*/
+  position: fixed;
+  z-index: -1;
+  /*Box model stuff*/
+  width: 100%;
+  height: 100vh;
+  background-color: hsl(235, 21%, 11%);
+  background-image: url(assets/images/bg-desktop-dark.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.container {
+  align-items: center;
+  /* border: 2px solid green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 4em;
+  margin: auto;
+  width: 38vw;
+  /* height: 80vh; */
+  /* overflow: hidden; */
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: hsl(236, 33%, 92%);
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+header > h1 {
+  letter-spacing: 0.5em;
+}
+
+.inputDiv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(235, 24%, 19%);
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.inputDiv:hover .deleteBtn {
+  visibility: visible;
+}
+
+.radioBtn {
+  margin-right: 1.2em;
+  width: 1.4em;
+  height: 1.4em;
+  border-radius: 50%;
+  border: 1px solid hsl(234, 11%, 52%);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.inputTasks {
+  background: none;
+  outline: none;
+  border: none;
+  width: 100%;
+  color: hsl(234, 39%, 85%);
+  border-radius: 4px;
+  font-size: larger;
+  font-weight: 500;
+  caret-color: hsl(234, 39%, 85%);
+}
+
+.inputDiv > p {
+  color: hsl(234, 39%, 85%);
+  flex: 1;
+}
+
+.deleteBtn {
+  background: none;
+  border: none;
+  color: hsl(234, 39%, 85%);
+  font-size: 1em;
+  visibility: hidden;
+}
+
+
+.todoLists {
+  margin-top: 1em;
+  width: 100%;
+  flex-direction: column;
+  /* overflow-y: scroll; */
+}
+
+.todoLists::-webkit-scrollbar-track {
+  background-color: hsl(235, 24%, 19%);
+}
+
+.todoLists::-webkit-scrollbar {
+  width: 10px;
+  background-color: hsl(235, 24%, 19%);
+}
+
+.todoLists::-webkit-scrollbar-thumb {
+  background-color: hsl(235, 21%, 11%);
+}
+
+.todoList {
+  /* border: 2px solid red; */
+  border-bottom: 0.2px solid hsl(233, 14%, 35%);
+  color: hsl(234, 24%, 77%);
+  border-radius: 0px;
+  justify-content: flex-start;
+}
+
+/* .todoList:hover {
+  opacity: 8;
+} */
+
+.checkImageDiv {
+  background-image: linear-gradient(
+    to right,
+    hsl(195, 100%, 87%),
+    hsl(280, 87%, 65%)
+  );
+  display: grid;
+  place-items: center;
+  /* border: 1px solid hsl(234, 11%, 52%); */
+}
+
+.checked {
+  text-decoration: line-through;
+  color: hsla(240, 9%, 61%, 0.644);
+}
+
+.checkImageDiv > img {
+  border: none;
+  object-fit: cover;
+  width: 40%;
+  object-position: center;
+}
+
+.footerContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  color: hsla(240, 9%, 61%, 0.644);
+}
+
+.itemsLeft {
+  cursor: pointer;
+}
+
+.middleFooter {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.itemsLeft,
+.allTasks,
+.activeTasks,
+.tasksCompleted,
+.clearCompleted {
+  cursor: pointer;
+}
+
+.itemsLeft:hover,
+.allTasks:hover,
+.activeTasks:hover,
+.tasksCompleted:hover,
+.clearCompleted:hover {
+  color: hsl(0, 0%, 100%);
+}
+
+.clearCompleted {
+  cursor: pointer;
+}
